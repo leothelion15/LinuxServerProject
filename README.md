@@ -59,7 +59,6 @@ b.	Save and close
 #8. Create an SSH key pair for grader using the ssh-keygen tool.
 1.	In local terminal, access the server: $ ssh grader@18.210.244.219 -p 2200
 2.	On the local machine: $ ssh-keygen
-
   a.	generate key pair<br>
   b.	Do this on the local machine<br>
   c.	File should be the same .ssh directory as asked about with no file extension <br>
