@@ -59,26 +59,27 @@ b.	Save and close
 #8. Create an SSH key pair for grader using the ssh-keygen tool.
 1.	In local terminal, access the server: $ ssh grader@18.210.244.219 -p 2200
 2.	On the local machine: $ ssh-keygen
-  a.	generate key pair
-  b.	Do this on the local machine
-  c.	File should be the same .ssh directory as asked about with no file extension 
-  d.	Key name: graderkey
-  e.	Passphrase: linuxserver
-  f.	$ cat ~/.ssh/graderkey.pub
-  i.	Copy the contents
-3.	As the new user
-  a.	$mkdir .ssh – create new directory
-  b.	$ touch .ssh/authorized_keys – make this file
-  c.	$ sudo nano .ssh/authorized_keys
-  d.	Paste and save
-  e.	Set the permissions: $ chmod 700 .ssh
-  i. $ chmod 644 .ssh/authorized_keys
-4.	Disable PW login
-  a.	$ sudo nano /etc/ssh/sshd_config
-  b.	Change “PasswordAuthentication yes” to “PasswordAuthentication no”
-5.	Erase “Port 22” in the sshd_config file and $ sudo ufw deny 22
-6.	Restart the service with $ sudo service ssh restart
-7.	To login $ ssh grader@18.210.244.219 -p 2200 -i ~/.ssh/graderkey
+
+  a.	generate key pair<br>
+  b.	Do this on the local machine<br>
+  c.	File should be the same .ssh directory as asked about with no file extension <br>
+  d.	Key name: graderkey<br>
+  e.	Passphrase: linuxserver<br>
+  f.	$ cat ~/.ssh/graderkey.pub<br>
+  i.	Copy the contents<br><br>
+3.	As the new user<br>
+  a.	$mkdir .ssh – create new directory<br>
+  b.	$ touch .ssh/authorized_keys – make this file<br>
+  c.	$ sudo nano .ssh/authorized_keys<br>
+  d.	Paste and save<br>
+  e.	Set the permissions: $ chmod 700 .ssh<br>
+  i. $ chmod 644 .ssh/authorized_keys<br><br>
+4.	Disable PW login<br>
+  a.	$ sudo nano /etc/ssh/sshd_config<br>
+  b.	Change “PasswordAuthentication yes” to “PasswordAuthentication no”<br><br>
+5.	Erase “Port 22” in the sshd_config file and $ sudo ufw deny 22<br>
+6.	Restart the service with $ sudo service ssh restart<br>
+7.	To login $ ssh grader@18.210.244.219 -p 2200 -i ~/.ssh/graderkey<br><br>
 Prepare to deploy your project.
 
 #9. Configure the local timezone to UTC.
