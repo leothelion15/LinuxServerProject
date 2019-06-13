@@ -21,14 +21,14 @@ Secure your server.
 2.	$ sudo apt-get upgrade
 
 #4. Change the SSH port from 22 to 2200. Make sure to configure the Lightsail firewall to allow it.
-1.	On Lightsail website, under network tab
-a.	create custom TCP application with 2200 port number
-b.	create custom UDP application with 123 port number
+1.	On Lightsail website, under network tab<br>
+a.	create custom TCP application with 2200 port number<br>
+b.	create custom UDP application with 123 port number<br>
 2.	reboot server
-3.	$ sudo nano /etc/ssh/sshd_config
-a.	add Port 2200 below Port 22 
-b.	Change “PasswordAuthentication no” to “PasswordAuthentication yes”
-c.	write file and exit (ctrl o, enter, ctrl x)
+3.	$ sudo nano /etc/ssh/sshd_config<br>
+a.	add Port 2200 below Port 22 <br>
+b.	Change “PasswordAuthentication no” to “PasswordAuthentication yes”<br>
+c.	write file and exit (ctrl o, enter, ctrl x)<br>
 4.	reboot the server
 
 #5. Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).
