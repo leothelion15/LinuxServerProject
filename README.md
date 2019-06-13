@@ -28,7 +28,8 @@ b.	create custom UDP application with 123 port number<br>
 3.	$ sudo nano /etc/ssh/sshd_config<br>
 a.	add Port 2200 below Port 22 <br>
 b.	Change “PasswordAuthentication no” to “PasswordAuthentication yes”<br>
-c.	write file and exit (ctrl o, enter, ctrl x)<br>
+c.	Change “PermitRootLogin prohibit-password” to “PermitRootLogin no”<br>
+d.	write file and exit (ctrl o, enter, ctrl x)<br>
 4.	reboot the server
 
 #5. Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).
@@ -182,3 +183,12 @@ o	save and close
 6.	$ sudo a2dissite 000-default.conf
 7.	$ sudo a2ensite CatalogAppServer.conf
 8.	$ sudo service apache2 reload
+
+Resources
+
+•	Guide to Changing Server Ports, https://knowledge.udacity.com/questions/18052<br>
+•	Guide for Deploying Flask Application on Ubuntu, https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps<br>
+•	Guide for Deploying Flask Application on Ubuntu https://umar-yusuf.blogspot.com/2018/02/deploying-python-flask-web-app-on.html<br>
+•	Application Being Deployed, https://github.com/leothelion15/CatalogAppServer<br>
+•	Tutorial for PostgrSQL, http://www.yolinux.com/TUTORIALS/LinuxTutorialPostgreSQL.html
+
